@@ -1,0 +1,10 @@
+.Book {
+    padding: 15px 15px 40px;
+    border: darkcyan solid 2px;
+    margin-bottom: 25px;
+}
+
+.BookCover {
+    width: 200px;
+    height: auto;
+}
