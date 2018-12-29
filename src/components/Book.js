@@ -11,9 +11,9 @@ class Book extends React.Component {
 
         return (
             <div className="Book" onClick={() => this.bookDetails('xyi')}>
-                <img className="BookCover" src={'covers/' + book.cover} alt="Book cover"/>
+                <img className="BookCover" src={'covers/' + book.cover} alt="Book cover"
+                    height="200" width="130" title={book.name}/>
                 <br/>
-                <span>{book.id + ') ' + book.name}</span>
             </div>
         )
     }
@@ -25,6 +25,5 @@ class Book extends React.Component {
         window.open(window.location + 'pdf/' + book.file, "_blank")
     }
 }
-
 
 export default Book;

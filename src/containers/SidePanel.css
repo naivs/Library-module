@@ -1,0 +1,14 @@
+.SidePanel {
+    background-color: #2d2d2d;
+    width: 20%;
+    color: white;
+}
+
+.SidePanel Button {
+    margin: 25px 0 25px 0;
+}
+
+.SidePanel .nav {
+    font-size: 20px;
+    text-align: left;
+}

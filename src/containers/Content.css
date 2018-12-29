@@ -1,0 +1,8 @@
+.Content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: start;
+    background-color: #5d5d5d;
+    padding-left: 40px;
+}

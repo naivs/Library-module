@@ -1,10 +1,5 @@
 .Book {
-    padding: 15px 15px 40px;
-    border: darkcyan solid 2px;
-    margin-bottom: 25px;
-}
-
-.BookCover {
-    width: 200px;
-    height: auto;
+    padding: 25px;
+    /*border: darkcyan solid 2px;*/
+    /*margin: 25px 25px 0 25px;*/
 }
