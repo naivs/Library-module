@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-export default class FieldFileInput  extends Component{
+export default class FileInputField  extends Component{
     constructor(props) {
         super(props);
         this.onChange = this.onChange.bind(this)

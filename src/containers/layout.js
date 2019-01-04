@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
-import './Layout.css'
-import TopPanel from './TopPanel'
-import SidePanel from './SidePanel'
-import Content from './Content'
+import './layout.css'
+import TopPanel from './top.panel'
+import SidePanel from './side.panel'
+import Content from './content'
 
 class Layout extends Component {
-    state = {
-        menu: false
-    };
+    // state = {
+    //     menu: false
+    // };
 
     render() {
         return (

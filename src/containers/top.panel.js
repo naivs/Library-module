@@ -1,5 +1,5 @@
 import React from 'react'
-import './TopPanel.css'
+import './top.panel.css'
 import Background from '../img/header-texture.png'
 
 class TopPanel extends React.Component {

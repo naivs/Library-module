@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 // import logo from './logo.svg';
-import './App.css';
-import Layout from './containers/Layout'
+import './app.css';
+import Layout from './containers/layout'
 import { connect } from 'react-redux'
 
 class App extends Component {

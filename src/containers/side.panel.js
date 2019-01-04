@@ -2,10 +2,13 @@ import React from 'react'
 import {
     Button, Modal, Nav, NavItem
 } from 'react-bootstrap'
-import './SidePanel.css'
+import './side.panel.css'
 import {connect} from 'react-redux'
-import AddBookForm from '../forms/AddBookForm'
+import AddBookForm from '../forms/add.book.form'
 import {submit} from 'redux-form'
+import {
+    add_paper
+} from "../api/paper.api";
 
 class SidePanel extends React.Component {
     static handleSelect(selectedKey) {
@@ -20,14 +23,7 @@ class SidePanel extends React.Component {
             data.append(e, payload[e])});
 
         // data.append('file', formData.file);
-        fetch('papers/add', {
-            method: 'POST',
-            headers: {
-                // 'Accept': 'application/x-www-form-urlencoded',
-                // 'Content-Type': 'multipart/form-data',
-            },
-            body: data
-        })
+        add_paper(data);
     }
 
     render() {

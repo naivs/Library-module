@@ -1,9 +1,14 @@
 import React from 'react'
-import './Content.css'
-import Book from '../components/Book'
+import './content.css'
+import Book from '../components/book'
 import {connect} from 'react-redux'
+import {get_paper_list} from '../api/paper.api'
 
 class Content extends React.Component {
+    componentDidMount() {
+        get_paper_list(this.props.updatePaperList)
+    }
+
     render() {
         const {
             books
@@ -25,4 +30,10 @@ function mapStateToProps(state) {
     return state.booksReducer
 }
 
-export default connect(mapStateToProps)(Content)
+function mapDispatchToProps(dispatch) {
+    return {
+        updatePaperList: (paperList) => dispatch({type: 'UPDATE_PAPER_LIST', payload: paperList}),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content)

@@ -1,6 +1,6 @@
 import React from 'react'
 import {Field, reduxForm} from 'redux-form'
-import FieldFileInput from '../components/FieldFileInput'
+import FileInputField from '../components/file.input.field'
 
 let AddBookForm = props => {
     return <form>
@@ -14,13 +14,13 @@ let AddBookForm = props => {
         <div>
             <label htmlFor="paperFile">Файл*</label>
             <div>
-                <Field name="paperFile" component={FieldFileInput} type="file"/>
+                <Field name="paperFile" component={FileInputField} type="file"/>
             </div>
         </div>
         <div>
             <label htmlFor="coverFile">Обложка</label>
             <div>
-                <Field name="coverFile" component={FieldFileInput} type="file"/>
+                <Field name="coverFile" component={FileInputField} type="file"/>
             </div>
         </div>
         <div>
