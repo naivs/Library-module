@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Layout from './containers/Layout'
-import Book from './components/Book'
+import { connect } from 'react-redux'
 
 class App extends Component {
     render() {
@@ -14,4 +14,10 @@ class App extends Component {
     }
 }
 
-export default App;
+function mapStateToProps(state) {
+    return {
+        app: state.appReducer
+    }
+}
+
+export default connect(mapStateToProps)(App);

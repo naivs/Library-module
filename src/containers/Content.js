@@ -1,66 +1,28 @@
 import React from 'react'
 import './Content.css'
 import Book from '../components/Book'
+import {connect} from 'react-redux'
 
-export default props => {
-    const books = [
-        {
-            id: 0,
-            name: 'angular for professionals',
-            cover: 'angular for professionals.JPG',
-            file: 'Angular.pdf'
-        },
-        {
-            id: 1,
-            name: 'angular web development',
-            cover: 'angular web development.JPG',
-            file: 'doc_2018-06-26_19-51-20.pdf'
-        },
-        {
-            id: 2,
-            name: 'css guide',
-            cover: 'css guide.jpg',
-            file: 'doc_2018-06-26_19-52-10.pdf'
-        },
-        {
-            id: 3,
-            name: 'java network programming',
-            cover: 'java network programming.JPG',
-            file: 'Java Network Programming, 4th Edition.pdf'
-        },
-        {
-            id: 4,
-            name: 'java philisofy',
-            cover: 'java philisofy.JPG',
-            file: 'Брюс Эккель - Философия Java - 2015.pdf'
-        },
-        {
-            id: 5,
-            name: 'java script book',
-            cover: 'java script book.JPG',
-            file: 'impatient-js-preview-book.pdf'
-        },
-        {
-            id: 6,
-            name: 'machine learning',
-            cover: 'machine learning.JPG',
-            file: 'маш.pdf'
-        },
-        {
-            id: 7,
-            name: 'spring for pro',
-            cover: 'spring for pro.JPG',
-            file: 'spring-4-dlya-professionalov.pdf'
-        }
-    ];
+class Content extends React.Component {
+    render() {
+        const {
+            books
+        } = this.props;
 
-    return (
-        <div className="Content">
+        return (
+            <div className="Content">
                 {books.map((book) => {
                     return (
-                        <Book book={book}/>
+                        <Book key={book.id} book={book}/>
                     )
                 })}
-        </div>
-    )
+            </div>
+        )
+    }
 }
+
+function mapStateToProps(state) {
+    return state.booksReducer
+}
+
+export default connect(mapStateToProps)(Content)

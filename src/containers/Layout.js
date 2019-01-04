@@ -9,18 +9,6 @@ class Layout extends Component {
         menu: false
     };
 
-    toggleMenuHandler = () => {
-        this.setState({
-            menu: !this.state.menu
-        })
-    };
-
-    closeMenuHandler = () => {
-        this.setState({
-            menu: false
-        })
-    };
-
     render() {
         return (
             <div className="Layout">

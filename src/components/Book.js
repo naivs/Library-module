@@ -3,8 +3,6 @@ import './Book.css'
 
 class Book extends React.Component {
     render() {
-        console.log(window.location);
-
         const {
             book
         } = this.props;
